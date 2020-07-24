@@ -20,7 +20,7 @@ class ApiController extends AbstractController
     public function addRegionByApi(SerializerInterface $serializer)
     {
         $regionJson=file_get_contents("https://geo.api.gouv.fr/regions");
-    /*  //1- Methode 1
+    /*  //1- Methode 1 Denormalisation et Decodage
         // Decode Json vers Tableau
         $regionTab=$serializer->decode($regionJson,"json");
         // Denormalisation Tableau vers Objet ou Tableau Objet
